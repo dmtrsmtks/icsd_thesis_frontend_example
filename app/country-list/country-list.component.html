@@ -1,0 +1,26 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Place</th>
+        <th scope="col">Public Service Name/Digital</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let country of countries">
+        <td>{{ country.id }}</td>
+        <td>{{ country.name }}</td>
+        <td>{{ country.place }}</td>
+        <td>
+          <li *ngFor="let ps of country.publicServiceViewModels" style="list-style-type: none;">
+            <b>{{ps.name}}</b> : {{ps.digital}}
+          </li>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
